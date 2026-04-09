@@ -198,18 +198,25 @@ crud-akademik/
 
 ---
 
+## ⚙️ DevOps & Deployment
+
+- **Hosting**: [InfinityFree](https://infinityfree.net)
+- **Strategi Deployment**: Sinkronisasi file manual dengan rutinitas backup database otomatis.
+- **Audit Keamanan**: Arsitektur query 100% aman dengan PDO untuk memastikan nol celah SQL-Injection.
+- **Monitoring**: Terhubung ke sistem health-check Portfolio terpusat melalui probe HTTP HEAD standar.
+
+---
+
 ## 👤 Author
 
 <div align="center">
 
-**Berlin Sugiyanto**
+**Berlin Sugiyanto Hutajulu**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-berlinsugi-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/berlinsugi)
 [![Portfolio](https://img.shields.io/badge/Portfolio-berlinsugi.vercel.app-4e73df?style=flat-square&logo=vercel)](https://berlinsugi.vercel.app)
 [![Email](https://img.shields.io/badge/Email-berlinsugiyanto23%40gmail.com-D14836?style=flat-square&logo=gmail)](mailto:berlinsugiyanto23@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-B3rlinSugi-181717?style=flat-square&logo=github)](https://github.com/B3rlinSugi)
-
-</div>
 
 ---
 
