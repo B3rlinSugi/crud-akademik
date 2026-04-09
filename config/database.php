@@ -1,8 +1,9 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'db_akademik');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', getenv('MYSQLHOST')     ?: 'localhost');
+define('DB_PORT', getenv('MYSQLPORT')     ?: '3306');
+define('DB_NAME', getenv('MYSQLDATABASE') ?: 'db_akademik');
+define('DB_USER', getenv('MYSQLUSER')     ?: 'root');
+define('DB_PASS', getenv('MYSQLPASSWORD') ?: '');
 define('APP_NAME', 'Sistem Data Akademik');
 
 function getDB(): PDO {
@@ -10,7 +11,7 @@ function getDB(): PDO {
     if ($pdo === null) {
         try {
             $pdo = new PDO(
-                'mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8mb4',
+                'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME.';charset=utf8mb4',
                 DB_USER, DB_PASS,
                 [
                     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

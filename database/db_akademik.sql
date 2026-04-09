@@ -6,8 +6,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
-CREATE DATABASE IF NOT EXISTS db_akademik CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE db_akademik;
 
 -- Tabel Users (Login)
 CREATE TABLE IF NOT EXISTS users (
@@ -21,8 +19,8 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- password = "admin123" (bcrypt)
 INSERT INTO users (nama, email, password, role) VALUES
-('Administrator', 'admin@akademik.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'),
-('Staff TU', 'staff@akademik.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'staff');
+('Administrator', 'admin@akademik.com', '$2y$10$ffMTis6jVwb6S8NxeFJvHuFazPmR.vK5ImMbia4Ti.jjek9MtOzP.', 'admin'),
+('Staff TU', 'staff@akademik.com', '$2y$10$ffMTis6jVwb6S8NxeFJvHuFazPmR.vK5ImMbia4Ti.jjek9MtOzP.', 'staff');
 
 -- Tabel Kelas
 CREATE TABLE IF NOT EXISTS kelas (
