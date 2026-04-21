@@ -2,6 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=180&section=header&text=Sistem%20Data%20Akademik&fontSize=40&fontColor=e94560&animation=fadeIn&fontAlignY=38&desc=Academic%20Data%20Management%20%7C%20PHP%208%20%7C%20MySQL%20%7C%20RBAC&descAlignY=55&descColor=a8b2d8" />
 
+<a href="https://readme-typing-svg.herokuapp.com"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=15&duration=3000&pause=1000&color=E94560&center=true&vCenter=true&width=535&lines=👨‍🎓+Multi-Role+School+Data+Management;🔒+Secure+Role-Based+Access+Control+(RBAC);📈+Real-Time+Analytics+Dashboard+with+Chart.js;🗄️+100%25+PDO+Prepared+Statements+for+Security" alt="Typing SVG" /></a>
 [![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
