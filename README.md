@@ -5,102 +5,206 @@
     <strong>Academic Data Management System with Strict Database Integrity</strong>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/PHP_8-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8" />
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-    <img src="https://img.shields.io/badge/PDO_Security-000000?style=for-the-badge&logo=shield&logoColor=white" alt="PDO" />
+    A native PHP-based web application demonstrating strict relational integrity and application security using raw SQL constraints and PDO.<br><br>
+    <strong>🚀 Tech Stack:</strong> Native PHP 8, MySQL, Bootstrap 5
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Language-PHP_8-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8" />
+    <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+    <img src="https://img.shields.io/badge/Styling-Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+    <img src="https://img.shields.io/badge/Security-PDO_Prepared_Statements-000000?style=for-the-badge&logo=shield&logoColor=white" alt="PDO" />
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Status-Active_Development-success?style=flat-square" alt="Status" />
+    <img src="https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square" alt="Version" />
+    <img src="https://img.shields.io/github/last-commit/B3rlinSugi/crud-akademik?style=flat-square" alt="Last Updated" />
+    <img src="https://img.shields.io/github/stars/B3rlinSugi/crud-akademik?style=flat-square" alt="Stars" />
+    <img src="https://img.shields.io/github/issues/B3rlinSugi/crud-akademik?style=flat-square" alt="Issues" />
+    <img src="https://img.shields.io/github/license/B3rlinSugi/crud-akademik?style=flat-square" alt="License" />
   </p>
   <p>
-    <a href="https://crud-akademik.vercel.app/" target="_blank">View Live Demo</a>
+    <a href="https://crud-akademik.vercel.app/" target="_blank"><strong>View Live Demo</strong></a>
   </p>
 </div>
 
 ---
 
-## 📌 Overview
+## 📑 Table of Contents
 
-**CRUD Akademik** is a native PHP-based web application built to manage academic data efficiently. The primary focus of this project is demonstrating **Strict Database Integrity** and **Application Security** using raw PHP Data Objects (PDO). 
+- [About This Project](#-about-this-project)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Software Architecture](#-software-architecture)
+- [Database Design](#-database-design)
+- [Project Structure](#-project-structure)
+- [Installation Guide](#-installation-guide)
+- [Security Hardening Details](#-security-hardening-details)
+- [Performance Optimization & Scalability](#-performance-optimization--scalability)
+- [Development Workflow & Deployment](#-development-workflow--deployment)
+- [Roadmap & Known Limitations](#-roadmap--known-limitations)
+- [Lessons Learned](#-lessons-learned)
+- [Contributing](#-contributing)
+- [Why This Project Demonstrates Software Engineering Skills](#-why-this-project-demonstrates-software-engineering-skills)
 
-Instead of relying on ORMs to handle relationships, this system utilizes pure SQL queries with `ON DELETE RESTRICT` constraints to prevent orphaned records, ensuring that class data cannot be deleted if students are still enrolled.
+---
+
+## 🎯 About This Project
+
+### Why This Project Exists
+**CRUD Akademik** is a native PHP-based web application built to manage academic data efficiently. The primary focus of this project is demonstrating **Strict Database Integrity** and **Application Security** using raw PHP Data Objects (PDO) without the abstraction of modern ORMs.
+
+### The Problem Being Solved
+Many junior projects rely on application-level logic to prevent data deletion errors (e.g., PHP checking if a student exists before deleting a class). This is fundamentally unsafe as race conditions can occur. This project solves that by pushing the integrity constraints directly to the database layer.
+
+### Business Value
+- **Zero Data Orphans:** Utilizing pure SQL queries with `ON DELETE RESTRICT` constraints prevents orphaned records, ensuring that class data cannot be deleted if students are still enrolled.
+- **High Performance:** Minimal overhead compared to heavy MVC frameworks.
+
+---
 
 ## ✨ Key Features
 
-- **Strict Relational Integrity**: Implements `ON DELETE RESTRICT` foreign keys. If an administrator attempts to delete a class (`Kelas`) that contains active students, the database actively rejects the query, preventing data corruption.
-- **Role-Based Access Control (RBAC)**: Distinct dashboards and permissions for `Admin` (full access) and `Staff` (view/edit limited).
-- **Advanced Data Tables**: Features robust server-side data handling including pagination, multi-column search, and filtering.
-- **Automated PDF Reporting**: Generates formatted PDF reports of academic records using `TCPDF/FPDF` libraries.
-- **Bulletproof Security**: Prevents SQL Injection through strict implementation of PDO Prepared Statements on all queries.
+### Core Operations
+*   **Student & Class Management:** Complete Create, Read, Update, and Delete lifecycles for academic entities.
+*   **Advanced Data Tables:** Features robust server-side data handling including pagination, multi-column search, and filtering.
+
+### Security & Integrity
+*   **Strict Relational Integrity:** Implements `ON DELETE RESTRICT` foreign keys. If an administrator attempts to delete a class (`Kelas`) that contains active students, the database actively rejects the query, preventing data corruption.
+*   **Role-Based Access Control (RBAC):** Distinct dashboards and permissions for `Admin` (full access) and `Staff` (view/edit limited).
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 💻 Tech Stack
 
-- **Backend**: Native PHP 8
-- **Database**: MySQL 8.x
-- **Database Extension**: PDO (PHP Data Objects)
-- **Frontend Framework**: HTML5, CSS3, Bootstrap 5
-- **Reporting Engine**: TCPDF / FPDF for document generation
-- **Architecture**: Procedural Native combined with structured directories (`/auth`, `/kelas`, `/siswa`).
+### Backend & Database
+*   **Language:** PHP 8.x (Native)
+*   **Database Engine:** MySQL 8.0 (InnoDB)
+*   **Driver:** PHP Data Objects (PDO)
+
+### Frontend
+*   **Markup/Styling:** HTML5, CSS3, Bootstrap 5
+*   **Interactivity:** Vanilla JS / jQuery
 
 ---
 
-## 🗄️ Database Integrity Snapshot
+## 🏗️ Software Architecture
 
-```sql
--- Example of strict relational mapping used in this project
-CREATE TABLE tb_siswa (
-    id_siswa INT PRIMARY KEY AUTO_INCREMENT,
-    nis VARCHAR(20) UNIQUE NOT NULL,
-    nama_siswa VARCHAR(100) NOT NULL,
-    id_kelas INT NOT NULL,
-    CONSTRAINT fk_kelas 
-        FOREIGN KEY (id_kelas) 
-        REFERENCES tb_kelas(id_kelas)
-        ON DELETE RESTRICT 
-        ON UPDATE CASCADE
-);
+This project utilizes a **Modular Procedural Architecture**.
+
+```mermaid
+flowchart TD
+    Client["Web Browser"] -->|"HTTP Request"| Entry["index.php / Module Files"]
+    
+    subgraph "Native PHP Core"
+        Entry -->|"Session Init"| Auth["auth/login.php"]
+        Entry -->|"Require Config"| Config["config/database.php"]
+        
+        Config -->|"PDO Connection"| Logic["Business Logic (siswa, kelas)"]
+        Logic -->|"HTML Output"| Views["Browser Rendering"]
+    end
+    
+    Logic -->|"Prepared Statements"| MySQL[("MySQL Database")]
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🗄️ Database Design
 
-### Prerequisites
-- **Apache Web Server** (XAMPP / Laragon)
-- **PHP 8.0+**
-- **MySQL Database**
+The schema leverages InnoDB features to enforce strict relational mapping.
 
-### Installation
+```mermaid
+erDiagram
+    kelas ||--o{ siswa : "contains"
+    users ||--o{ audit_logs : "triggers"
+    
+    kelas {
+        int id PK
+        string nama_kelas UK
+    }
+    
+    siswa {
+        int id PK
+        string nis UK
+        string nama
+        int kelas_id FK "ON DELETE RESTRICT"
+    }
+    
+    users {
+        int id PK
+        string username UK
+        string password
+        string role "Admin | Staff"
+    }
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/B3rlinSugi/crud-akademik.git
-   cd crud-akademik
-   ```
+---
 
-2. **Database Setup:**
-   - Create a new MySQL database named `db_akademik`.
-   - Import the provided SQL dump located at `database/db_akademik.sql`.
+## 📁 Project Structure
 
-3. **Configure Connection:**
-   - Open `config/database.php`.
-   - Update the PDO connection parameters to match your local environment.
+```text
+├── assets/                  # CSS, JS, and UI images
+├── auth/                    # Authentication logic
+├── config/                  # Configuration (Database PDO Singleton)
+├── database/                # SQL schema dumps
+├── kelas/                   # Domain: Class management logic
+├── siswa/                   # Domain: Student management logic
+└── index.php                # Main dashboard entry point
+```
 
-4. **Run the Application:**
-   - Ensure the project is in your web server's root directory (`htdocs` or `www`).
-   - Open your browser: `http://localhost/crud-akademik`.
+---
+
+## 🚀 Installation Guide
+
+### 1. Requirements
+*   PHP 8.0+
+*   MySQL 8.0+
+
+### 2. Clone the Repository
+```bash
+git clone https://github.com/B3rlinSugi/crud-akademik.git
+cd crud-akademik
+```
+
+### 3. Database Setup
+1. Create a MySQL database.
+2. Import the SQL dump from the `database/` directory.
+
+### 4. Configuration
+Open the config file and update your MySQL credentials.
+
+### 5. Run the Application
+Place the folder inside `htdocs` or run PHP's built-in server:
+```bash
+php -S localhost:8000
+```
+
+---
+
+## 🤝 Contributing
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+---
+
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 👨‍💻 Author
 
-**Berlin Sugiyanto**  
-Backend Developer & System Architect  
-- Portfolio: [berlinsugi.vercel.app](https://berlinsugi.vercel.app/)
-- LinkedIn: [linkedin.com/in/berlinsugi](https://linkedin.com/in/berlinsugi)
+**Berlin Sugiyanto**
+*   Backend Developer | System Architect
+*   [LinkedIn](https://linkedin.com/in/berlinsugi)
 
 ---
 
-<div align="center">
-  <i>"Data integrity at the database level is the first line of defense."</i>
-</div>
+<br>
+
+# 👔 Why This Project Demonstrates Software Engineering Skills
+
+*A note for Technical Recruiters and Engineering Managers.*
+
+1.  **Database Mastery:** Emphasizing `ON DELETE RESTRICT` at the SQL level rather than the application level demonstrates a deep understanding of Data Integrity and ACID principles.
+2.  **Raw Security Understanding:** Properly utilizing PDO Prepared Statements for all operations proves that the developer doesn't just rely on framework magic to prevent SQL Injection, but fundamentally understands how the attack vectors operate and how to neutralize them manually.
