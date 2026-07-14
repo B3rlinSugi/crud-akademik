@@ -1,33 +1,17 @@
 <div align="center">
-  <br />
-  <h1>🎓 CRUD Akademik</h1>
-  <p>
-    <strong>Academic Data Management System with Strict Database Integrity</strong>
-  </p>
-  <p>
-    A native PHP-based web application demonstrating strict relational integrity and application security using raw SQL constraints and PDO.<br><br>
-    <strong>🚀 Tech Stack:</strong> Native PHP 8, MySQL, Bootstrap 5
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/Language-PHP_8-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8" />
-    <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/Styling-Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-    <img src="https://img.shields.io/badge/Security-PDO_Prepared_Statements-000000?style=for-the-badge&logo=shield&logoColor=white" alt="PDO" />
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/Status-Active_Development-success?style=flat-square" alt="Status" />
-    <img src="https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square" alt="Version" />
-    <img src="https://img.shields.io/github/last-commit/B3rlinSugi/crud-akademik?style=flat-square" alt="Last Updated" />
-    <img src="https://img.shields.io/github/stars/B3rlinSugi/crud-akademik?style=flat-square" alt="Stars" />
-    <img src="https://img.shields.io/github/issues/B3rlinSugi/crud-akademik?style=flat-square" alt="Issues" />
-    <img src="https://img.shields.io/github/license/B3rlinSugi/crud-akademik?style=flat-square" alt="License" />
-  </p>
-  <p>
-    <a href="https://crud-akademik.vercel.app/" target="_blank"><strong>View Live Demo</strong></a>
-  </p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=CRUD%20Akademik&fontSize=60&fontAlignY=35&desc=Academic%20Data%20Management%20System&descAlignY=55&descAlign=50" />
+  <br /><br />
+  <a href="https://crud-akademik.vercel.app/">
+    <img src="https://img.shields.io/badge/Live_Demo-%E2%86%92-FF6B00?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  </a>
 </div>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&style=for-the-badge" alt="PHP 8" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/MySQL-DB-4479A1?logo=mysql&style=for-the-badge" alt="MySQL" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&style=for-the-badge" alt="Bootstrap" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Security-PDO-black?logo=shield&style=for-the-badge" alt="PDO" /></a>
+</p>
 
 ---
 
